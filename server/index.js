@@ -19,8 +19,9 @@ mongoose.connect(config.mongoURI, {
 }).then( () => console.log('MongoDB Connected...'))
   .catch(err => console.log(err))
 
-app.get('/', (req, res) => res.send('Hello World! 안녕하세요ㅎ'))
+app.get('/', (req, res) => res.send('Hello World! 안녕하세요'))
 
+app.get('/api/hello', (req, res) => res.send('Hello World!~~ '))
 
 app.post('/api/users/register', (req, res) => {
 
